@@ -5,7 +5,12 @@ class: invert
 backgroundColor: black
 ---
 
-# Fuzzy Set Theory
+## PART ONE: THEORY
+
+### CHAPTER 1
+#### FROM ORDINARY (CRISP) SETS TO FUZZY SETS: A GRAND PARADIGM SHIFT
+
+---
 
 ## References
 
@@ -13,14 +18,6 @@ Primarily
 
 *George J. Klir and Bo Yuan. 1994. Fuzzy sets and fuzzy logic: theory and applications. Prentice-Hall, Inc., USA.*
 
----
-
-## PART ONE: THEORY
-
----
-
-### CHAPTER 1
-#### FROM ORDINARY (CRISP) SETS TO FUZZY SETS: A GRAND PARADIGM SHIFT
 
 ---
 
@@ -428,11 +425,70 @@ $$
 
 ---
 
-- normality and convexity can be lost when oprated on by standard fuzzy set operations
+## Set Inclusion
+
+Given $A, B \in \mathcal{F}(X)$ 
+$$
+A \subseteq B \Leftrightarrow \forall x \in X \; \; A(x) \leq B(x)
+$$
 
 ---
 
 ## De Morgan Lattice
 
+- A Fuzzy powerset can be viewed as a lattice with standard fuzzy intersection and union playing the roles of meet and join respectively. 
 
+- The lattice is distributed and complemented under the standard operations. 
+
+- It satisfies all Boolean lattice properties except the law of contradiction and the law of excluded middle
+
+- $\langle \mathcal{F}(X), \subseteq \rangle$ 
+
+---
+
+#### Scalar Cardinality (or Sigma Count)
+
+$$
+|A| = \sum_{x \in X} A(x)
+$$
+
+#### Degree of Subsethood
+
+$$
+S(A, B) = \frac{1}{|A|}\left (|A| - \sum_{x \in X}max[0, A(x) - B(x)] \right ) = \frac{|A \cap B|}{|A|}
+$$
+
+---
+
+## Alternate Representation
+
+* only with finite support
+
+$$
+A = a_1/x_1 + a_2/x_2 + ... + a_n/x_n
+$$
+
+Where $x_i \in {}^{0+}A$ and $a_i = A(x_i)$
+
+When $X$ is countable $A = \sum_{i=1}^n a_i/x_i$ or $A = \sum_{i=1}^\infty a_i/x_i$
+
+else when $X$ is an interval of real numbers $A = \int_x A(x)/x$
+
+---
+
+Interpret fuzzy set of $X$ with $n$ elements as an $n$-dimensional unit cube
+
+- Whole cube represents $\mathcal{F}(X)$
+- Vertices represent $\mathcal{P}(X)$
+
+Distance between Fuzzy Sets $A$ and $B$ could be
+
+$$
+d(A, B) = \sum_{x \in X} |A(x) - B(x)|
+$$
+
+Probability distributions are fuzzy sets whose cardinality is 1 |
+---| 
+
+---
 
